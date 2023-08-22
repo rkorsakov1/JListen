@@ -158,12 +158,13 @@ a {
 @media only screen and (max-width: 1000px) {
   .overlay {
     flex-direction: column; /* Change to a vertical layout */
-    padding: 4rem; /* Adjust padding for the new layout */
+    padding: 4rem 30px; /* Adjust padding for smaller screens */
+    max-width: calc(100% - 60px); /* Total width minus 2*30px margin */
     max-height: none; /* Remove the maximum height */
   }
 
   .overlay__inner {
-    max-width: 100%; /* Allow full width for text and image */
+    max-width: calc(100% - 60px); /* Adjust inner width to match overlay */
   }
 
   .overlay__image {
