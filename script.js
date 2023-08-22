@@ -226,3 +226,17 @@ document
       orb.fill = colorPalette.randomColor();
     });
   });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactButton = document.getElementById("contactBtn");
+
+  contactButton.addEventListener("click", function () {
+    const emailAddress = "a@jlisten.com";
+    const subject = "Inquiry from JListen Website";
+    const body = "Hello,\n\nI would like to inquire about...";
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
+  });
+});
