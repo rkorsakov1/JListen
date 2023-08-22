@@ -155,13 +155,12 @@ a {
   }
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 1000px) {
   body {
     padding: 1.5rem;
   }
-
   .overlay {
-    padding: 4rem;
+    padding: 1.5rem;
     height: auto;
   }
 
@@ -175,12 +174,6 @@ a {
     font-size: 0.875rem;
     line-height: 1.5rem;
     margin-bottom: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .overlay {
-    padding: 1.5rem;
   }
 
   .overlay__btns {
