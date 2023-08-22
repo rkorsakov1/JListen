@@ -156,37 +156,36 @@ a {
 }
 
 @media only screen and (max-width: 1000px) {
-  body {
-    padding: 1.5rem;
-  }
   .overlay {
-    padding: 1.5rem;
-    height: auto;
+    flex-direction: column; /* Change to a vertical layout */
+    padding: 4rem; /* Adjust padding for the new layout */
+    max-height: none; /* Remove the maximum height */
   }
 
-  .overlay__title {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    margin-bottom: 1.5rem;
+  .overlay__inner {
+    max-width: 100%; /* Allow full width for text and image */
   }
 
-  .overlay__description {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    margin-bottom: 2.5rem;
+  .overlay__image {
+    width: 100%; /* Take up full width in vertical layout */
+    max-height: 50vh; /* Limit image height to 50% of viewport height */
+    margin-left: 0; /* Remove margin to align image and text */
   }
 
   .overlay__btns {
-    flex-wrap: wrap;
+    max-width: none; /* Allow full width for buttons */
+    margin-top: 2rem; /* Add space between image and buttons */
   }
 
   .overlay__btn {
-    width: 100%;
-    font-size: 0.75rem;
-    margin-right: 0;
+    width: 100%; /* Full width buttons in vertical layout */
   }
 
   .overlay__btn:first-child {
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; /* Adjust spacing between buttons */
+  }
+
+  .overlay__description {
+    font-size: 1rem; /* Adjust font size for smaller screens */
   }
 }
