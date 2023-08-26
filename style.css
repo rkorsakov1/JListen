@@ -155,37 +155,40 @@ a {
   }
 }
 @media only screen and (max-width: 1000px) {
+  /* Adjust overlay padding and layout */
   .overlay {
-    padding: 4rem 1rem; /* Adjust padding for smaller screens */
-    flex-direction: column; /* Change to a vertical layout */
-    align-items: center; /* Center content vertically */
+    padding: 4rem 1rem;
+    flex-direction: column;
+    align-items: center;
   }
 
   .overlay__inner {
-    max-width: 100%; /* Adjust inner width to match overlay */
-    text-align: center; /* Center text content */
+    max-width: 100%;
+    text-align: center;
   }
-}
-.overlay__title {
-    font-size: 1.5rem; /* Adjust title font size */
+
+  /* Enlarge text and adjust button styles */
+  .overlay__title {
+    font-size: 1.5rem;
     line-height: 2rem;
     margin-bottom: 1.5rem;
   }
 
   .overlay__description {
-    font-size: 0.875rem; /* Adjust description font size */
+    font-size: 0.875rem;
     line-height: 1.5rem;
     margin-bottom: 2rem;
   }
 
   .overlay__btn {
-    width: 100%; /* Full width buttons in vertical layout */
-    height: 3rem; /* Increase button height for touch interaction */
-    font-size: 1rem; /* Increase button font size */
-    margin-bottom: 1rem; /* Add space between buttons */
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
-}
-.orb-canvas {
+
+  /* Hide canvas on mobile */
+  .orb-canvas {
     display: none;
   }
 }
