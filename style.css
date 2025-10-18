@@ -107,6 +107,32 @@ strong {
   margin-left: 0.375rem;
 }
 
+.overlay__btn--funk {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  color: var(--light-color);
+  border: none;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  animation: funky-pulse 2s ease-in-out infinite;
+}
+
+.overlay__btn--funk:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.overlay__btn--funk a {
+  color: var(--light-color);
+}
+
+@keyframes funky-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(118, 75, 162, 0.6);
+  }
+}
+
 a {
   text-decoration: none;
   color: var(--dark-color);
