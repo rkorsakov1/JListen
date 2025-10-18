@@ -125,7 +125,7 @@ strong {
 }
 
 .overlay__btn--funk a {
-  color: var(--light-color);
+  color: #ffffff !important;
 }
 
 @keyframes funky-pulse {
