@@ -166,14 +166,15 @@ strong {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 2.75rem;
-  padding: 0 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-family: inherit;
   font-size: 0.875rem;
+  line-height: 1.25;
   font-weight: 600;
   color: var(--light-color);
   background: var(--dark-color);
@@ -239,10 +240,10 @@ strong {
   color: var(--light-color);
 }
 
+/* Wrap rather than truncate — grid rows stay equal height on their own, so a
+   two-line label is safe but a clipped album title would not be. */
 .overlay__btn-label {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  text-wrap: balance;
 }
 
 .overlay__btn-emoji {
