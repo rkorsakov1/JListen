@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JListen website</title>
+  <title>JListen — Andrey</title>
+  <meta name="description" content="Andrey (JListen) — funk and soul mixes, plus original modern electronic music. Listen on Mixcloud and streaming.">
+  <link rel="preload" href="./assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/poppins-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="Zebra_icon.png">
 <!-- Google tag (gtag.js) -->
@@ -25,39 +28,51 @@
   <!-- Overlay inner wrapper -->
   <div class="overlay__inner">
     <!-- Title -->
-    <h1 class="overlay__title">
-      Welcome to
-      <span class="text-gradient">JListen</span>!
+    <h1 class="overlay__title reveal">
+      Hi, I’m
+      <span class="text-gradient">Andrey</span>
     </h1>
     <!-- Description -->
-    <p class="overlay__description">
-      <strong>I’m Andrey, music producer and collector with a product marketing mind.</strong>
-    </p>
-    <!-- Buttons -->
-    <div class="overlay__btns">
-
-      <button class="overlay__btn overlay__btn--transparent">
-        <a href="https://www.mixcloud.com/jlisten/" target="_blank">
-          Explore mixes
-          <span class="overlay__btn-emoji">🎧 </span>
-        </a>
-      </button>
-
-      <button id="contactBtn" class="overlay__btn overlay__btn--colors">
-        <span>Contact me</span>
-      </button>
+    <div class="overlay__description">
+      <p class="reveal reveal--1">
+        60s and 70s funk and soul did more with less gear than most things do now.
+        They lift you, and move your head before you’ve agreed to it.
+        <strong>That’s what I go to music for.</strong>
+      </p>
+      <p class="reveal reveal--2">
+        I mix that music, and I make my own — more modern, more electronic.
+      </p>
+      <p class="reveal reveal--3">
+        Have a listen. I’d love to hear from you.
+      </p>
     </div>
+    <!-- Buttons -->
+    <div class="overlay__btns reveal reveal--4">
 
-    <!-- Lake-Funk Button -->
-    <div class="overlay__btns" style="margin-top: 1rem;">
-      <button class="overlay__btn overlay__btn--funk">
-        <a href="https://distrokid.com/hyperfollow/jlisten/sounds-from-the-lake-deluxe" target="_blank">
-          Lake-Funk
-          <span class="overlay__btn-emoji">🌊✨</span>
-        </a>
+      <a class="overlay__btn overlay__btn--album overlay__btn--lake"
+         href="https://distrokid.com/hyperfollow/jlisten/sounds-from-the-lake-deluxe" target="_blank" rel="noopener">
+        <span class="overlay__btn-label">Sounds from the Lake</span>
+        <span class="overlay__btn-emoji">🌊</span>
+      </a>
+
+      <a class="overlay__btn overlay__btn--album overlay__btn--frequency"
+         href="https://distrokid.com/hyperfollow/jlisten/inherent-frequency" target="_blank" rel="noopener">
+        <span class="overlay__btn-label">Inherent Frequency</span>
+        <span class="overlay__btn-emoji">🎛️</span>
+      </a>
+
+      <a class="overlay__btn overlay__btn--transparent"
+         href="https://www.mixcloud.com/jlisten/" target="_blank" rel="noopener">
+        <span class="overlay__btn-label">Explore mixes</span>
+        <span class="overlay__btn-emoji">🎧</span>
+      </a>
+
+      <button id="contactBtn" class="overlay__btn overlay__btn--colors" type="button">
+        <span class="overlay__btn-label">Contact me</span>
+        <span class="overlay__btn-emoji">✉️</span>
       </button>
     </div>
   </div>
 </div>
-<!-- partial -->  <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.4.1/dist/pixi.min.js"></script>  <script src="./script.js"></script></body>
+<!-- partial -->  <script src="./vendor/pixi.min.js"></script>  <script src="./script.js"></script></body>
 </html>

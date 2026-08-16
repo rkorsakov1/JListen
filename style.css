@@ -1,3 +1,58 @@
+/* Poppins — self-hosted subsets from Google Fonts (SIL Open Font License 1.1) */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/poppins-400-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/poppins-400-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/poppins-600-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./assets/fonts/poppins-600-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/poppins-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/poppins-700-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 :root {
   --dark-color: hsl(var(--hue), 100%, 9%);
   --light-color: hsl(var(--hue), 95%, 98%);
@@ -45,11 +100,12 @@ strong {
 .overlay {
   width: 100%;
   max-width: 1140px;
-  max-height: 640px;
-  padding: 8rem 6rem;
+  padding: 6rem;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.375);
+  -webkit-backdrop-filter: blur(6px) saturate(1.1);
+  backdrop-filter: blur(6px) saturate(1.1);
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
@@ -60,87 +116,216 @@ strong {
 }
 
 .overlay__title {
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   line-height: 2.75rem;
   font-weight: 700;
   letter-spacing: -0.025em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .text-gradient {
   background-image: linear-gradient(
     45deg,
-    var(--base) 25%,
-    var(--complimentary2)
+    var(--base) 15%,
+    var(--complimentary1) 50%,
+    var(--complimentary2) 85%
   );
+  background-size: 200% 200%;
+  animation: gradient-drift 8s ease infinite;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
 
+@keyframes gradient-drift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 .overlay__description {
   font-size: 1rem;
   line-height: 1.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.overlay__description p + p {
+  margin-top: 1rem;
 }
 
 .overlay__btns {
   width: 100%;
   max-width: 30rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
 }
 
-.overlay__btn {  width: 50%;  height: 2.5rem;  display: flex;  justify-content: center;  align-items: center;  font-size: 0.875rem;  font-weight: 600;  color: var(--light-color);  background: var(--dark-color);  border: none;  border-radius: 0.5rem;  transition: transform 150ms ease, box-shadow 150ms ease;  outline-color: hsl(var(--hue), 95%, 50%);  will-change: transform;}
+.overlay__btn {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--light-color);
+  background: var(--dark-color);
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  outline-color: hsl(var(--hue), 95%, 50%);
+  will-change: transform;
+}
 
-.overlay__btn:hover {  transform: scale(1.05);  cursor: pointer;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);}
+.overlay__btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.overlay__btn:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.overlay__btn:focus-visible {
+  outline: 3px solid hsl(var(--hue), 95%, 45%);
+  outline-offset: 3px;
+}
+
+/* Sheen that sweeps across a button on hover */
+.overlay__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.overlay__btn:hover::after {
+  animation: sheen 700ms ease;
+}
+
+@keyframes sheen {
+  0% { left: -60%; opacity: 0; }
+  15% { opacity: 1; }
+  100% { left: 130%; opacity: 0; }
+}
 
 .overlay__btn--transparent {
   background: transparent;
   color: var(--dark-color);
   border: 2px solid var(--dark-color);
-  border-width: 2px;
-  margin-right: 0.75rem;
+}
+
+.overlay__btn--transparent:hover {
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.overlay__btn-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .overlay__btn-emoji {
   margin-left: 0.375rem;
+  flex-shrink: 0;
 }
 
-.overlay__btn--funk {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  color: var(--light-color);
+/* Album buttons */
+.overlay__btn--album {
+  color: #ffffff;
   border: none;
+}
+
+.overlay__btn--lake {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  animation: funky-pulse 2s ease-in-out infinite;
+  animation: funky-pulse-lake 2.4s ease-in-out infinite;
 }
 
-.overlay__btn--funk:hover {
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-  transform: scale(1.05) rotate(-1deg);
+.overlay__btn--lake:hover {
+  box-shadow: 0 8px 22px rgba(102, 126, 234, 0.6);
+  transform: translateY(-2px) scale(1.03) rotate(-1deg);
 }
 
-.overlay__btn--funk a {
-  color: #ffffff !important;
+.overlay__btn--frequency {
+  background: linear-gradient(135deg, #f7971e 0%, #e2537b 55%, #b621fe 100%);
+  box-shadow: 0 4px 15px rgba(226, 83, 123, 0.4);
+  animation: funky-pulse-frequency 2.4s ease-in-out infinite;
+  animation-delay: 1.2s;
 }
 
-@keyframes funky-pulse {
-  0%, 100% {
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-  }
-  50% {
-    box-shadow: 0 4px 20px rgba(118, 75, 162, 0.6);
-  }
+.overlay__btn--frequency:hover {
+  box-shadow: 0 8px 22px rgba(226, 83, 123, 0.6);
+  transform: translateY(-2px) scale(1.03) rotate(1deg);
+}
+
+@keyframes funky-pulse-lake {
+  0%, 100% { box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
+  50% { box-shadow: 0 4px 22px rgba(118, 75, 162, 0.6); }
+}
+
+@keyframes funky-pulse-frequency {
+  0%, 100% { box-shadow: 0 4px 15px rgba(226, 83, 123, 0.4); }
+  50% { box-shadow: 0 4px 22px rgba(182, 33, 254, 0.55); }
 }
 
 a {
   text-decoration: none;
   color: var(--dark-color);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+/* Staggered entrance */
+.reveal {
+  animation: reveal-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal--1 { animation-delay: 100ms; }
+.reveal--2 { animation-delay: 200ms; }
+.reveal--3 { animation-delay: 300ms; }
+.reveal--4 { animation-delay: 400ms; }
+
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .text-gradient,
+  .overlay__btn--album {
+    animation: none;
+  }
+
+  .overlay__btn:hover::after {
+    animation: none;
+  }
+
+  .overlay__btn,
+  .overlay__btn:hover,
+  .overlay__btn:active {
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Not too many browser support this yet but it's good to add! */
@@ -152,7 +337,7 @@ a {
 
 @media only screen and (max-width: 1140px) {
   .overlay {
-    padding: 8rem 4rem;
+    padding: 5rem 4rem;
   }
 }
 
@@ -162,39 +347,38 @@ a {
   }
 
   .overlay {
-    padding: 4rem;
+    padding: 3rem;
     height: auto;
   }
 
   .overlay__title {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.25rem;
   }
 
   .overlay__description {
-    font-size: 0.875rem;
-    line-height: 1.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .overlay {
-    padding: 1.5rem;
+    padding: 1.75rem 1.5rem;
+  }
+
+  .overlay__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .overlay__btns {
-    flex-wrap: wrap;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .overlay__btn {
-    width: 100%;
-    font-size: 0.75rem;
-    margin-right: 0;
-  }
-
-  .overlay__btn:first-child {
-    margin-bottom: 1rem;
+    font-size: 0.8125rem;
   }
 }
